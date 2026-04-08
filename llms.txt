@@ -15,13 +15,13 @@ Python, Django, FastAPI, LangChain, LangGraph, PydanticAI, Golang, Rust, Kuberne
 ## Work Experience
 
 ### Patronus — Founding Technical Lead (Sep 2024 – Present)
-Sole architect and end-to-end owner of the full technical stack. Built a Consent Management Platform handling 8 million user consents across 97 million banner interactions with sub-50ms write latency and 9 months of 100% availability. Built a PII vault in Golang for ultra-low latency personal data storage. Built an AI-First privacy engine with autonomous agents that interpret India's DPDP Act, GDPR, and CCPA — cutting DPIA compliance turnaround from 3 weeks to 1 week.
+Lead Architect and end-to-end owner of the full technical stack. Built a Consent Management Platform handling 8 million user consents across 97 million banner interactions with sub-50ms write latency and 9 months of 100% availability. Built a PII vault in Golang for ultra-low latency personal data storage. Built an AI-First privacy engine where agents conduct DPIA assessments and flag compliance gaps for human sign-off — cutting turnaround from 3 weeks to 1 week.
 
 ### RadiXplore — Software Development Engineer (Aug 2023 – Jul 2024)
-Built a serverless RAG document intelligence pipeline on LangChain and AWS Lambda with a terabyte-scale Elasticsearch vector index. Reduced query latency from 15 seconds to 2–3 seconds through deep Elasticsearch tuning. Wrote a custom Rust-based PDF parser for terabyte-scale document ingestion where standard libraries failed.
+Built a serverless RAG document intelligence pipeline on LangChain and AWS Lambda with a terabyte-scale Elasticsearch vector index. Reduced query latency from 15 seconds to 2–3 seconds through deep Elasticsearch tuning. Built a high-throughput Rust microservice wrapping pdfium, tuned to the structural variance of the document corpus — off-the-shelf extraction pipelines couldn't handle it at terabyte scale.
 
 ### Disecto — Software Development Engineer (Jun 2022 – May 2023)
-Migrated a legacy Django monolith to microservices. Refactored Celery workers for genuine parallelism — reduced a 100GB workload from 13 hours to 4.
+Migrated a legacy Django monolith to microservices. Refactored Celery workers for genuine parallelism — reduced processing of 100GB of unstructured data (images, documents, presentations) from 13 hours to 4.
 
 ### Independent — Backend Freelancer (2019 – 2022)
 Django stack freelance work running in parallel with hardware businesses and community projects.

@@ -338,11 +338,50 @@
 
   /* RESPONSIVE */
   @media (max-width: 640px) {
+    /* Nav */
     nav { padding: 1rem 1.2rem; }
+    .nav-email { display: none; }
+
+    /* Layout */
     .page-wrap { padding: 0 1.2rem; }
-    .hero { padding: 100px 0 48px; }
-    .stat-pill { min-width: 100px; }
+
+    /* Hero */
+    .hero { padding: 100px 0 40px; }
+    .hero-name { letter-spacing: -0.015em; }
+    .hero-title { font-size: 0.95rem; }
+
+    /* Stat row — tighter pills, wrap into 3+2 rows */
+    .stat-row { gap: 0.5rem; }
+    .stat-pill { min-width: 90px; padding: 0.5rem 0.8rem; }
+    .stat-val { font-size: 1.2rem; }
+    .stat-lbl { font-size: 0.6rem; }
+
+    /* Tags */
+    .tag { font-size: 0.65rem; padding: 0.25rem 0.65rem; }
+
+    /* Sections */
+    section { padding: 40px 0; }
+
+    /* Experience cards */
     .exp-card, .signal-card { padding: 1.2rem 1.3rem; }
+    .exp-role { font-size: 0.95rem; }
+    .exp-body, .signal-body { font-size: 0.83rem; }
+    .exp-header { flex-direction: column; gap: 0.2rem; }
+
+    /* Skills — 2 columns */
+    .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+
+    /* Signal metrics */
+    .signal-metrics { gap: 0.8rem; }
+
+    /* Contact */
+    .contact-links { flex-direction: column; align-items: stretch; }
+    .contact-link { justify-content: center; }
+  }
+
+  @media (max-width: 380px) {
+    .stat-pill { min-width: 80px; }
+    .skills-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -452,13 +491,13 @@
         </div>
         <div class="exp-role">Founding Technical Lead</div>
         <div class="exp-body">
-          Sole architect and end-to-end owner of the entire technical stack — designed, built, and deployed from scratch.
+          Lead Architect and end-to-end owner of the entire technical stack — designed, built, and deployed from scratch.
           The Consent Management Platform handles <strong>8 million user consents</strong> across <strong>97 million banner
           interactions</strong> with sub-50ms write latency and zero downtime via an event-driven, immutable-log architecture.
           Latency-critical paths — including a PII vault — were built in <strong>Golang</strong> where Python's overhead
           wasn't acceptable. The harder problem was what came after: an AI-First privacy engine where autonomous agents
           interpret India's <strong>DPDP Act</strong>, GDPR, and CCPA, assess data flows, and validate risk. The DPIA
-          Agent cut compliance turnaround from <strong>3 weeks to 1 week</strong>.
+          DPIA Agent conducts impact assessments and flags compliance gaps for human sign-off — cutting turnaround from <strong>3 weeks to 1 week</strong>.
         </div>
         <div class="exp-outcomes">
           <span class="outcome-pill">97M banner interactions</span>
@@ -490,8 +529,8 @@
           vector index in self-hosted Elasticsearch. The bottleneck was never the LLM; it was retrieval latency.
           Solved it by going deep into Elasticsearch internals: sharding strategies, memory mapping, embedding
           dimensionality. Queries went from <strong>15 seconds to 2–3</strong>. Pre-processing was equally
-          non-trivial: wrote a custom <strong>Rust-based PDF parser</strong> tuned to the document corpus —
-          the standard libraries couldn't handle the structural variance at terabyte scale without choking.
+          non-trivial: built a high-throughput <strong>Rust microservice wrapping pdfium</strong>, tuned to the structural variance of our specific corpus —
+          off-the-shelf extraction pipelines couldn't handle it at terabyte scale without choking.
           Measurable throughput gains over the Python baseline.
         </div>
         <div class="exp-outcomes">
@@ -519,11 +558,11 @@
         <div class="exp-body">
           Containerized a legacy Django monolith into a microservices architecture. The real work was
           in Celery — refactoring workers for genuine parallel execution rather than the illusion of it.
-          The same <strong>100GB workload went from 13 hours to 4</strong>. Getting distributed task queues
+          The same <strong>100GB of unstructured data — images, documents, presentations — went from 13 hours to 4</strong>. Getting distributed task queues
           to behave correctly under load is a different problem from getting them to run at all.
         </div>
         <div class="exp-outcomes">
-          <span class="outcome-pill">13h → 4h (100GB workload)</span>
+          <span class="outcome-pill">13h → 4h (100GB unstructured)</span>
           <span class="outcome-pill">Monolith → microservices</span>
         </div>
         <div class="exp-chips">
