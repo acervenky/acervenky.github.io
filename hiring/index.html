@@ -496,8 +496,7 @@
           interactions</strong> with sub-50ms write latency and zero downtime via an event-driven, immutable-log architecture.
           Latency-critical paths — including a PII vault — were built in <strong>Golang</strong> where Python's overhead
           wasn't acceptable. The harder problem was what came after: an AI-First privacy engine where autonomous agents
-          interpret India's <strong>DPDP Act</strong>, GDPR, and CCPA, assess data flows, and validate risk. The DPIA
-          DPIA Agent conducts impact assessments and flags compliance gaps for human sign-off — cutting turnaround from <strong>3 weeks to 1 week</strong>.
+          interpret India's <strong>DPDP Act</strong>, GDPR, and CCPA, assess data flows, and validate risk. The DPIA Agent conducts impact assessments and flags compliance gaps for human sign-off — cutting turnaround from <strong>3 weeks to 1 week</strong>.
         </div>
         <div class="exp-outcomes">
           <span class="outcome-pill">97M banner interactions</span>
@@ -583,31 +582,46 @@
     <h2 class="section-title">Built Outside <span class="grad">Work</span></h2>
 
     <div class="signal-card">
-      <div class="signal-tag">OE — 02 · Live since 2024</div>
-      <div class="signal-title">Air Memory</div>
-      <div class="signal-sub">Turned a ₹999 IKEA sensor into a research-grade atmospheric intelligence platform.</div>
+      <div class="signal-tag">AE — 01 · Adequately Engineered Series</div>
+      <div class="signal-title">IndITR</div>
+      <div class="signal-sub">A conversational Indian tax agent. The LLM collects data. Python computes tax. These two never switch roles.</div>
       <div class="signal-body">
-        Tapped the UART line of an IKEA VINDRIKTNING, wired in an ESP32-C6 running Tasmota, and built an <strong>11-month
-        continuous telemetry pipeline</strong> on top. The analysis layer runs STL decomposition,
-        Lomb-Scargle periodograms, Prophet forecasting, and cross-validates local readings against
-        <strong>ESA's CAMS satellite reanalysis</strong>. A 3D-printed HEPA filter housing with three PWM
-        fans at 186 CFM handles mitigation. An LLM generates daily air quality narratives. This project
-        exists because I wanted to understand the data at the level where it becomes actionable —
-        not just surface alerts.
+        A LangGraph state machine that interviews you conversationally, parses Form 16 and Zerodha/Upstox P&L
+        via LLM, then hands everything to a <strong>pure Python tax engine with zero LLM involvement</strong>.
+        The engine has hardcoded slabs, tested surcharge brackets, verified 87A rebate logic, and deterministic
+        capital gains aggregation covering every Budget from 2024 through 2026. The LLM has a registered
+        tool suite — <code style="font-size:0.8em;color:var(--purple);">estimate_tax</code>,
+        <code style="font-size:0.8em;color:var(--purple);">calculate_hra</code>,
+        <code style="font-size:0.8em;color:var(--purple);">deduction_impact</code> — so when you ask
+        "what if I invest ₹1L in NPS?" it calls the actual engine with your actual numbers. It does not guess.<br><br>
+        The other half of BYOLLM: every user message triggers a semantic search over <strong>7 local RAG knowledge files</strong>
+        covering AY 2026-27 tax law — slabs, capital gains rules, deductions, TDS thresholds, VDA, ESOPs.
+        Retrieved chunks are injected as authoritative context at every turn. It doesn't matter which LLM you bring —
+        a 7B model running on a laptop CPU gets the same current tax law context as GPT-4.
+        Vector search runs on <strong>zvec</strong> — fast, local, no server, no dependencies.
       </div>
       <div class="signal-metrics">
-        <div class="sig-metric"><span class="sig-val">11 mo</span><span class="sig-lbl">Continuous data</span></div>
-        <div class="sig-metric"><span class="sig-val">12-stage</span><span class="sig-lbl">Pipeline</span></div>
-        <div class="sig-metric"><span class="sig-val">ESA CAMS</span><span class="sig-lbl">Satellite validation</span></div>
-        <div class="sig-metric"><span class="sig-val">186 CFM</span><span class="sig-lbl">Mitigation rig</span></div>
+        <div class="sig-metric"><span class="sig-val">301</span><span class="sig-lbl">Passing tests</span></div>
+        <div class="sig-metric"><span class="sig-val">4-act</span><span class="sig-lbl">LangGraph pipeline</span></div>
+        <div class="sig-metric"><span class="sig-val">Zero</span><span class="sig-lbl">LLM in tax engine</span></div>
+        <div class="sig-metric"><span class="sig-val">Local</span><span class="sig-lbl">Zero cloud required</span></div>
       </div>
       <div class="exp-chips">
-        <span class="chip">ESP32-C6</span>
-        <span class="chip">Prophet forecasting</span>
-        <span class="chip">STL decomposition</span>
-        <span class="chip">ESA CAMS API</span>
-        <span class="chip">LLM narrative generation</span>
-        <span class="chip">Python · Pandas</span>
+        <span class="chip">LangGraph · SqliteSaver</span>
+        <span class="chip">LiteLLM · BYOLLM</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">Pure Python engine</span>
+        <span class="chip">Pydantic v2</span>
+        <span class="chip">RAG · bge-small-en</span>
+        <span class="chip">zvec</span>
+        <span class="chip">pdfplumber</span>
+        <span class="chip">Ollama</span>
+      </div>
+      <div style="margin-top:1rem;">
+        <a href="https://github.com/acervenky/adequately-engineered-inditr" target="_blank" rel="noopener"
+           style="font-size:0.78rem;color:var(--purple);text-decoration:none;letter-spacing:0.04em;">
+          GitHub ↗
+        </a>
       </div>
     </div>
   </section>
@@ -615,7 +629,7 @@
   <!-- SKILLS -->
   <section>
     <div class="section-label">Technical Stack</div>
-    <h2 class="section-title">Tools I <span class="grad">Know Well</span></h2>
+    <h2 class="section-title">Tools I <span class="grad">Reach For</span></h2>
 
     <div class="skills-grid">
       <div class="skill-group">
@@ -674,7 +688,7 @@
     <div class="section-label">Get in touch</div>
     <h2 class="contact-heading">Let's <span class="grad">Talk</span></h2>
     <p class="contact-sub">
-      Backend, AI infrastructure, or anything at the intersection. Remote.
+      I'm open to senior remote engineering roles — backend, AI infrastructure, or anything that involves building systems that hold up at scale. Also happy to talk about LangGraph, Rust, or why your RAG pipeline is slow.
     </p>
     <div class="contact-links">
       <a href="mailto:surve.venkatesh@gmail.com" class="contact-link">
