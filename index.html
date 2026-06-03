@@ -651,6 +651,12 @@
     .skills-grid { grid-template-columns: 1fr; }
     .startup-grid { grid-template-columns: 1fr; }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    .reveal, .timeline-item { opacity: 1 !important; transform: none !important; }
+    #hero-role { transition: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -667,7 +673,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#ventures">Ventures</a></li>
     <li><a href="#community">Community</a></li>
-    <li><a href="#philosophy">Approach</a></li>
+    <li><a href="#philosophy">Philosophy</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-burger" id="nav-burger" aria-label="Open navigation" aria-expanded="false">
@@ -680,7 +686,7 @@
   <li><a href="#skills">Skills</a></li>
   <li><a href="#ventures">Ventures</a></li>
   <li><a href="#community">Community</a></li>
-  <li><a href="#philosophy">Approach</a></li>
+  <li><a href="#philosophy">Philosophy</a></li>
   <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -705,7 +711,7 @@
 <section id="hero">
   <h1 class="hero-name" data-text="Venkatesh Surve">Venkatesh Surve</h1>
   <p class="hero-tagline">
-    <span id="hero-role">AI Backend Engineer</span><br>
+    <span id="hero-role" aria-live="polite" aria-atomic="true">AI Backend Engineer</span><br>
     <span id="tagline-thinking">&gt; thinking...</span><span id="tagline-stream"></span><span id="tagline-cursor">|</span>
   </p>
   <div class="hero-cta">
@@ -776,7 +782,7 @@
   <div class="section-inner">
     <div class="section-label">Career</div>
     <h2 class="section-title reveal">Professional <span class="grad">Work</span></h2>
-    <p class="section-sub reveal">Software engineering roles defined by system-level thinking — from legacy modernization to autonomous AI privacy engines at scale.</p>
+    <p class="section-sub reveal">I've spent my career working closer to the metal than most backend engineers — from modernizing decade-old systems to building autonomous AI privacy engines that handle millions of records.</p>
 
     <div class="timeline">
       <div class="timeline-item">
@@ -873,7 +879,7 @@
     <p class="section-sub reveal">
       Five years of production engineering across AI pipelines, backend systems, and cloud infrastructure —
       built on 15 years of hardware-software work in kernel tuning, competitive overclocking, and embedded systems.
-      These are the tools I reach for — and know well enough to tune, debug, and replace.
+      These are the tools I reach for — not just to ship with, but to tune, debug, and swap out when something better exists.
     </p>
     <div class="skills-grid reveal">
       <div class="skill-group">
@@ -954,7 +960,7 @@
 <section id="ventures">
   <div class="section-inner">
     <div class="section-label">Entrepreneurship</div>
-    <h2 class="section-title reveal">Two <span class="grad">Startups</span></h2>
+    <h2 class="section-title reveal">Built Two, Before<br><span class="grad">I Had a Playbook</span></h2>
     <p class="section-sub reveal">
       Both built from scratch, both solving real hardware problems at the source — not the symptom.
     </p>
@@ -1022,8 +1028,8 @@
     <div class="section-label">Community Work · XDA Developers · HWBot</div>
     <h2 class="section-title reveal">Built in<br><span class="grad">the Open</span></h2>
     <p class="section-sub reveal">
-      Everything built for the community was published, documented, and maintained. The measure of this work
-      isn't the code — it's whether strangers trusted it on their daily-driver device.
+      The measure of this work isn't the code — it's whether strangers trusted it on their daily-driver device.
+      Everything was published, documented, and maintained. No private forks, no "works on my machine."
     </p>
 
     <!-- OnePlus / Redmi Era — lead with most impactful -->
@@ -1385,59 +1391,126 @@
   </div>
 </section>
 
+
+<!-- ═══ ADEQUATELY ENGINEERED SERIES ═══ -->
+<section id="ae-series" style="background:var(--bg2);">
+  <div class="section-inner">
+    <div class="section-label">DIY Engineering · Adequately Engineered Series</div>
+    <h2 class="section-title reveal">Right Tool.<br><span class="grad">Right Amount.</span></h2>
+    <p class="section-sub reveal">
+      The counterpoint to Over Engineered. Real problems. Boring stacks. Ships before the deadline.
+      No LLMs doing arithmetic. No Kubernetes for a side project. No blockchain anywhere.
+      Just the right tool, the right amount of it, and software that works.
+    </p>
+
+    <div class="oe-card reveal" style="margin-top:3rem;">
+      <div class="oe-card-body">
+        <div>
+          <div class="oe-number">AE — 01</div>
+          <div class="oe-title">IndITR</div>
+          <div class="oe-tagline">A conversational Indian tax agent. The LLM collects data. Python computes tax. These two never switch roles.</div>
+        </div>
+        <div class="oe-body">
+          Every year around mid-July the same panic sets in: Form 16 in inbox, Zerodha P&L downloaded,
+          ClearTax asking to upgrade to Pro, IT portal timing out. I'm a software engineer who builds systems
+          handling millions of users — why can I not file my own taxes?<br><br>
+          IndITR is the fix. A LangGraph state machine that interviews you conversationally, parses Form 16,
+          Zerodha/Upstox P&L, and bank statements — then hands everything to a pure Python tax engine
+          with zero LLM involvement. The engine has hardcoded slabs, tested surcharge brackets, verified 87A
+          rebate logic, and deterministic capital gains aggregation covering every Budget from 2024 through 2026.
+          301 tests. &gt;85% coverage. BYOLLM — works with Ollama, OpenRouter, DeepInfra, or anything
+          OpenAI-compatible. Run it fully local: your financial data never leaves your machine.
+        </div>
+        <div class="oe-metrics">
+          <div class="oe-metric"><span class="oe-val">301</span><span class="oe-lbl">Passing tests</span></div>
+          <div class="oe-metric"><span class="oe-val">4-act</span><span class="oe-lbl">LangGraph pipeline</span></div>
+          <div class="oe-metric"><span class="oe-val">Zero</span><span class="oe-lbl">LLM in tax engine</span></div>
+          <div class="oe-metric"><span class="oe-val">Local</span><span class="oe-lbl">Zero cloud required</span></div>
+        </div>
+        <div class="oe-stack">
+          <span class="tech-pill">LangGraph</span>
+          <span class="tech-pill">LiteLLM · BYOLLM</span>
+          <span class="tech-pill">FastAPI</span>
+          <span class="tech-pill">Pure Python engine</span>
+          <span class="tech-pill">pdfplumber</span>
+          <span class="tech-pill">Pydantic v2</span>
+          <span class="tech-pill">SQLite · SqliteSaver</span>
+          <span class="tech-pill">RAG · bge-small-en</span>
+          <span class="tech-pill">Ollama</span>
+        </div>
+        <div class="press-row" style="margin-top:1.2rem;">
+          <a href="https://github.com/acervenky/adequately-engineered-inditr" target="_blank" rel="noopener" class="press-tag">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="oe-cta reveal" style="margin-top:2.5rem;">
+      <div class="oe-cta-text">
+        <div class="section-label" style="margin-bottom:0.5rem;">Adequately Engineered</div>
+        <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:0.5rem;">Because sometimes, adequate is perfect.</h3>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;">
+          Every project in this series exists because I was personally annoyed by a problem and decided to fix it properly.
+          Style points optional. Working in production: mandatory.
+        </p>
+      </div>
+      <a href="https://github.com/acervenky" target="_blank" rel="noopener" class="btn btn-ghost">More on GitHub ↗</a>
+    </div>
+
+  </div>
+</section>
+
 <!-- ═══ PHILOSOPHY ═══ -->
 <section id="philosophy">
   <div class="section-inner">
     <div class="section-label">Engineering Approach</div>
     <h2 class="section-title reveal">What Makes the<br><span class="grad">Difference</span></h2>
     <p class="section-sub reveal">
-      Four things that consistently separate good engineering from engineering that
-      holds up at scale, under pressure, and in production.
+      Not principles I found in a book — the pattern I noticed after the same failure modes kept showing up, mine and everyone else's.
     </p>
 
     <div class="pillar-grid">
 
       <div class="pillar reveal">
         <div class="pillar-num">01</div>
-        <div class="pillar-title">Full Ownership, No Handoffs</div>
+        <div class="pillar-title">I own the whole thing</div>
         <div class="pillar-body">
-          Backend, frontend, AI pipelines, DevOps, IoT firmware, hardware — one engineer, the entire stack.
-          Systems fail at the seams between specialists, where context drops and assumptions travel unchecked.
-          Owning every layer means decisions are made with complete visibility, not partial information
-          passed across a boundary.
+          Backend, frontend, AI pipelines, DevOps, IoT firmware, hardware — I've built all of it, sometimes on the same project.
+          Not because I enjoy context-switching, but because I've seen what happens at the seams: context drops, assumptions
+          travel unchecked, and nobody actually owns the outcome. I'd rather own the whole thing and be wrong once
+          than hand it off and spend a week tracing where the information got lost.
         </div>
       </div>
 
       <div class="pillar reveal">
         <div class="pillar-num">02</div>
-        <div class="pillar-title">Hardware Is the First Constraint</div>
+        <div class="pillar-title">I start at the constraint, not the profiler</div>
         <div class="pillar-body">
-          AI pipelines and data systems hit ceilings that aren't in the code — they're in memory bandwidth,
-          thermal limits, and power delivery. Building from silicon up, overclocking, and tuning kernels
-          means performance bottlenecks get traced to the layer where they originate, not where they
-          surface in a profiler.
+          Most engineers see a slow pipeline and open a profiler. I start somewhere else — memory bandwidth,
+          thermal state, power delivery headroom. Not because it's interesting (though it is), but because that's
+          where AI systems and data pipelines actually hit their ceilings. Years of overclocking and kernel
+          work make this instinct hard to turn off. Usually it's right.
         </div>
       </div>
 
       <div class="pillar reveal">
         <div class="pillar-num">03</div>
-        <div class="pillar-title">One Layer Deeper</div>
+        <div class="pillar-title">The fix is always one layer down</div>
         <div class="pillar-body">
           At RadiXplore, the bottleneck wasn't the LLM — it was how vectors were indexed in Elasticsearch.
           At Disecto, Celery wasn't slow because of load — the workers weren't genuinely parallel.
           At Patronus, compliance wasn't slow because of people — the loop itself was manual.
-          The fix that matters is always one layer below where the problem first appears.
+          I've learned to start one layer below where the problem first appears. That's where the fix actually lives.
         </div>
       </div>
 
       <div class="pillar reveal">
         <div class="pillar-num">04</div>
-        <div class="pillar-title">Tested by Real Scale</div>
+        <div class="pillar-title">I've been on-call for those numbers</div>
         <div class="pillar-body">
-          97 million banner views. 8 million user consents. Terabytes of enterprise documents retrieved
-          in real time. These systems run under live load, with real consequences for latency or failure.
-          No staging environment approximates that — and no engineer who hasn't built for it reasons
-          about reliability the same way.
+          97 million banner views. 8 million user consents. Terabytes of documents retrieved in real time.
+          I've been on-call for those numbers, with real consequences for latency or failure.
+          No staging environment approximates that — and it changes how you reason about reliability.
+          You stop asking "will this work?" and start asking "what's the failure mode when it doesn't?"
         </div>
       </div>
 
