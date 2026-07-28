@@ -7,7 +7,7 @@
 
 <!-- ═══ PRIMARY META ═══ -->
 <title>Venkatesh Surve — Senior Backend & AI Engineer | Python · LangChain · Django · FastAPI</title>
-<meta name="description" content="Senior Backend and AI Engineer — 5 years building production AI systems, 15 years of hardware-software obsession before that. Multi-agent LLM pipelines, RAG architectures, privacy engineering, Linux kernel work, and custom hardware. Python, Django, FastAPI, LangChain, LangGraph, AWS, Azure, Golang, Rust. Open to senior engineering roles." />
+<meta name="description" content="Backend and AI engineer. Kernel tuning and hardware since 2012, production systems since 2019. Multi-agent LLM pipelines, RAG architectures, privacy engineering, Linux kernel work, and custom hardware. Python, Django, FastAPI, LangChain, LangGraph, AWS, Azure, Golang, Rust. Open to senior engineering roles." />
 <meta name="keywords" content="Backend Engineer, AI Engineer, Python Developer, LangChain, LangGraph, RAG, Multi-agent, Django, FastAPI, Flask, Golang, Rust, Docker, AWS, Azure, PostgreSQL, MongoDB, Redis, Linux Kernel, Embedded Systems, MicroPython, ESP32, Raspberry Pi, Privacy Engineering, DPDP Act, GDPR, CCPA, Senior Software Engineer, Founding Engineer, India" />
 <meta name="author" content="Venkatesh Surve" />
 <meta name="robots" content="index, follow" />
@@ -18,8 +18,8 @@
 <!-- ═══ OPEN GRAPH ═══ -->
 <meta property="og:type" content="profile" />
 <meta property="og:title" content="Venkatesh Surve — Senior Backend & AI Engineer" />
-<meta property="og:description" content="Senior Backend and AI Engineer — 5 years building production AI systems, backed by 15 years of hardware-software work. Multi-agent LLM pipelines, RAG architectures, privacy engineering, Linux kernel work, and custom hardware. Open to senior engineering roles." />
-<meta property="og:url" content="https://acervenky.github.io" />
+<meta property="og:description" content="Backend and AI engineer. Kernel tuning and hardware since 2012, production systems since 2019. Multi-agent LLM pipelines, RAG architectures, privacy engineering, Linux kernel work, and custom hardware. Open to senior engineering roles." />
+<meta property="og:url" content="https://acervenky.github.io/" />
 <meta property="og:image" content="https://acervenky.github.io/brains_and_relays_solarpcu.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -29,7 +29,8 @@
 <meta property="profile:username" content="acervenky" />
 
 <!-- ═══ TWITTER CARD ═══ -->
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://acervenky.github.io/brains_and_relays_solarpcu.jpg" />
 <meta name="twitter:title" content="Venkatesh Surve — Senior Backend & AI Engineer" />
 <meta name="twitter:description" content="Senior Backend and AI Engineer. Python · LangChain · LangGraph · Django · Kubernetes · AWS · Golang · Rust. Open to senior roles." />
 <meta name="twitter:creator" content="@acervenky" />
@@ -42,7 +43,7 @@
   "name": "Venkatesh Surve",
   "alternateName": "acervenky",
   "jobTitle": "Senior Backend & AI Engineer",
-  "description": "Senior Backend and AI Engineer — 5 years building production AI systems backed by 15 years of hardware-software work. Multi-agent LLM pipelines, RAG architectures, privacy engineering, Linux kernel work, and custom hardware.",
+  "description": "Backend and AI engineer. Kernel tuning and hardware since 2012, production systems since 2019. Multi-agent LLM pipelines, RAG architectures, privacy engineering, Linux kernel work, and custom hardware.",
   "url": "https://acervenky.github.io",
   "sameAs": [
     "https://github.com/acervenky",
@@ -117,19 +118,9 @@
     will-change: transform;
   }
 
-  /* CYCLING ROLE */
-  #hero-role {
-    display: inline-block;
-    transition: opacity 0.35s ease, transform 0.35s ease;
-  }
-  #hero-role.fade-out {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  #hero-role.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* HERO ROLE */
+  #hero-role { display: inline-block; }
+
 
   /* NAV */
   nav {
@@ -423,18 +414,22 @@
 
   /* ALSO SHIPPED */
   .also-shipped {
-    margin-top: 2rem;
-    padding: 1.2rem 1.6rem;
+    margin-top: 1.5rem;
+    padding: 1rem 1.4rem;
     border: 1px solid var(--glass-border);
     border-radius: 12px;
     background: var(--glass);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.6rem 1.6rem;
   }
   .also-shipped-label {
     font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--muted); margin-bottom: 0.8rem;
+    color: var(--muted); flex: 0 0 auto;
   }
   .also-shipped-list {
-    display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem;
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.6rem; flex: 1 1 320px;
   }
   .also-item {
     font-size: 0.8rem; color: var(--muted);
@@ -478,6 +473,15 @@
     position: relative; z-index: 1;
   }
   footer span { color: var(--purple); }
+  .footer-sites {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 1.4rem; margin-bottom: 1.1rem;
+  }
+  .footer-sites a {
+    font-size: 0.72rem; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; transition: color 0.3s;
+  }
+  .footer-sites a:hover { color: var(--white); }
 
   /* ANIMATIONS */
   @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
@@ -593,6 +597,27 @@
   .sub-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem; margin-top: 3rem; }
   .sub-intro { font-size: 0.88rem; color: var(--muted); max-width: 620px; line-height: 1.75; margin-bottom: 2rem; }
 
+  /* sub-section header: era label parked left, intro alongside it */
+  .sub-head { margin-top: 3rem; margin-bottom: 2rem; }
+  .sub-head .sub-label { margin-top: 0; }
+  .sub-head .sub-intro { margin-bottom: 0; }
+  @media (min-width: 940px) {
+    .sub-head {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .sub-head .sub-label {
+      margin-bottom: 0;
+      padding-top: 0.3rem;
+      line-height: 1.7;
+      border-left: 2px solid var(--glass-border);
+      padding-left: 1rem;
+    }
+    .sub-head .sub-intro { max-width: 720px; }
+  }
+
   @media (max-width: 900px) {
     .oe-grid { grid-template-columns: 1fr; }
     /* Force span-2 card to use explicit grid lines so no implicit 2nd column is created */
@@ -656,7 +681,6 @@
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     .reveal, .timeline-item { opacity: 1 !important; transform: none !important; }
-    #hero-role { transition: none !important; }
   }
 </style>
 </head>
@@ -674,6 +698,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#ventures">Ventures</a></li>
     <li><a href="#community">Community</a></li>
+    <li><a href="#maker">Builds</a></li>
     <li><a href="#philosophy">Philosophy</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -687,6 +712,7 @@
   <li><a href="#skills">Skills</a></li>
   <li><a href="#ventures">Ventures</a></li>
   <li><a href="#community">Community</a></li>
+  <li><a href="#maker">Builds</a></li>
   <li><a href="#philosophy">Philosophy</a></li>
   <li><a href="#contact">Contact</a></li>
 </ul>
@@ -700,9 +726,9 @@
   model trained on 12,000 pages of user journeys and compliance data — outperforming frontier API models on an
   internal benchmark at lower latency. Also built a DPIA Agent that conducts impact assessments and flags compliance
   gaps for human sign-off, cutting turnaround from 3 weeks to 1 week. At RadiXplore he reduced RAG query
-  latency from 15s to 2–3s and built a Rust microservice wrapping pdfium for terabyte-scale document ingestion. He has 15 years of hardware-software background including
-  competitive overclocking (#1 globally on i7-9750H Cinebench R20), custom Android kernel work, and two
-  hardware businesses.
+  latency from 15s to 2–3s and built a Rust microservice wrapping pdfium for terabyte-scale document ingestion.
+  His hardware-software background runs from 2012 onward: competitive overclocking (#1 globally on i7-9750H
+  Cinebench R20), custom Android kernel work, and two hardware businesses. Production engineering since 2019.
 
   He is open to senior remote engineering roles.
   Contact: surve.venkatesh@gmail.com
@@ -714,9 +740,10 @@
 <section id="hero">
   <h1 class="hero-name" data-text="Venkatesh Surve">Venkatesh Surve</h1>
   <p class="hero-tagline">
-    <span id="hero-role" aria-live="polite" aria-atomic="true">AI Backend Engineer</span><br>
+    <span id="hero-role">AI Backend Engineer</span><br>
     <span id="tagline-thinking">&gt; thinking...</span><span id="tagline-stream"></span><span id="tagline-cursor">|</span>
   </p>
+
   <div class="hero-cta">
     <a href="#experience" class="btn btn-primary">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
@@ -737,7 +764,7 @@
     <div class="section-label">Identity</div>
     <h2 class="section-title reveal">The <span class="grad">Foundation-Level</span><br>Thinker</h2>
     <p class="section-sub reveal">
-      The pattern that shows up across every domain I've worked in: trace the problem to its root, engineer the fix at the layer where it actually lives. Not as a reflex toward complexity — but because surface-level fixes tend to resurface. Fifteen years of that across hardware, kernel work, and production AI systems.
+      The pattern that shows up across every domain I've worked in: trace the problem to its root, engineer the fix at the layer where it actually lives. Not as a reflex toward complexity — but because surface-level fixes tend to resurface. Hardware and kernel work since 2012, production systems since 2019 — the instinct is the same in both.
     </p>
     <div class="domain-grid">
       <div class="domain-card reveal">
@@ -767,7 +794,7 @@
       <div class="domain-card reveal">
         <div class="domain-icon">🔊</div>
         <div class="domain-name">ROM & Audio Modding</div>
-        <div class="domain-desc">Custom ROMs for Sony Xperia as part of Xperia Pixel Team. Stereo speaker mods for OnePlus featured on XDA News and Beebom.</div>
+        <div class="domain-desc">Project Duality — a mixer-patching framework that brought stereo output to 17 flagships across 6 OEMs. Custom ROMs for Sony Xperia before that.</div>
         <div class="domain-tag">XDA Recognized</div>
       </div>
       <div class="domain-card reveal">
@@ -889,8 +916,8 @@
     <div class="section-label">Technical Stack</div>
     <h2 class="section-title reveal">Built With<br><span class="grad">These Tools</span></h2>
     <p class="section-sub reveal">
-      Five years of production engineering across AI pipelines, backend systems, and cloud infrastructure —
-      built on 15 years of hardware-software work in kernel tuning, competitive overclocking, and embedded systems.
+      Production engineering across AI pipelines, backend systems, and cloud infrastructure since 2019 —
+      on top of hardware-software work in kernel tuning, competitive overclocking, and embedded systems going back to 2012.
       These are the tools I reach for — not just to ship with, but to tune, debug, and swap out when something better exists.
     </p>
     <div class="skills-grid reveal">
@@ -959,6 +986,7 @@
         <div class="skill-group-label">DevOps &amp; Cloud</div>
         <div class="skill-pills">
           <span class="tech-pill">Docker</span>
+          <span class="tech-pill">Kubernetes</span>
           <span class="tech-pill">AWS (Lambda, S3)</span>
           <span class="tech-pill">Azure</span>
           <span class="tech-pill">Git / GitHub Actions</span>
@@ -1045,105 +1073,80 @@
     </p>
 
     <!-- OnePlus / Redmi Era — lead with most impactful -->
-    <div class="sub-label">OnePlus &amp; Redmi Era · 2018–2020</div>
-    <div class="sub-intro">
-      The audio mod work that XDA News and Beebom covered — and the kernel engineering that gave the Redmi K20 Pro
-      its competitive edge. Each project shipped stable, documented, and SafetyNet-clean.
+    <div class="sub-head">
+      <div class="sub-label">OnePlus · Xiaomi · Realme Era · 2018–2020</div>
+      <div class="sub-intro">
+        A single-device audio mod that turned into a cross-vendor framework — and the kernel engineering that gave the
+        Redmi K20 Pro its competitive edge. Each project shipped stable, documented, and SafetyNet-clean.
+      </div>
     </div>
     <div class="hack-grid">
       <div class="hack-card reveal">
-        <div class="hack-card-tag">Featured · 10+ Publications</div>
-        <div class="hack-title">Stereo Speaker Mod</div>
-        <div class="hack-sub">OnePlus 6 · 746 replies · v8</div>
+        <div class="hack-card-tag">Featured · 10+ Publications · 17 devices</div>
+        <div class="hack-title">Project Duality</div>
+        <div class="hack-sub">Stereo Speaker Framework · 6 OEMs · 3 codec families</div>
         <div class="hack-body">
-          Repurposed the earpiece as a secondary speaker via Tavil Mixer audio routing — transforming a mono
-          bottom-firing device into a true stereo experience. Eight versions across 38 pages of community threads.
-          Integrated into the NoLimits custom ROM. Picked up by 10+ publications within days of release.
+          These phones played music through a single bottom speaker — while a second speaker, the earpiece you hold
+          to your ear on calls, sat unused. The hardware was already capable of stereo; the manufacturers simply
+          hadn't wired it up in software. I did, by rewriting the Qualcomm audio routing tables and shipping the
+          change as a Magisk module.<br><br>
+          It began as one OnePlus 6 mod — eight versions, each fixing what the last uncovered: which channel goes
+          where, the delay between the two speakers, calls stealing the earpiece back, bluetooth and speakerphone
+          conflicts.<br><br>
+          <strong style="color:var(--white)">v7 was the turning point</strong> — I stopped shipping a replacement mixer
+          and started patching the existing one. That single change turned a per-device hack into a Python patcher
+          covering <strong style="color:var(--white)">17 flagships across OnePlus, Xiaomi, Realme, LG, Essential and
+          Nubia</strong>, spanning the Tasha (WCD9335) and Tavil (WCD9340) codecs plus custom mixer IDs on Realme
+          hardware that had no published mapping. I maintained the device support matrix and troubleshooting docs;
+          two devices were adopted by outside maintainers.<br><br>
+          This was 2018–2020. Using the earpiece as a second speaker is standard on Android phones today —
+          back then it was a handful of devices, and none of these were among them.
         </div>
         <div class="press-row">
-          <a href="https://github.com/acervenky/op6stereo" target="_blank" rel="noopener" class="press-tag">GitHub ↗</a>
+          <a href="https://github.com/acervenky/projectduality" target="_blank" rel="noopener" class="press-tag">Project Duality ↗</a>
+          <a href="https://github.com/acervenky/projectduality/wiki/Supported-Devices" target="_blank" rel="noopener" class="press-tag">17 supported devices ↗</a>
+          <a href="https://github.com/acervenky/op6stereo" target="_blank" rel="noopener" class="press-tag">OP6 module ↗</a>
           <a href="https://www.xda-developers.com/oneplus-6-stereo-speaker-mod/" target="_blank" rel="noopener" class="press-tag">XDA News ↗</a>
           <a href="https://beebom.com/new-magisk-mod-stereo-audio-oneplus-6/" target="_blank" rel="noopener" class="press-tag">Beebom ↗</a>
           <a href="https://www.neowin.net/news/developer-creates-oneplus-6-mod-that-will-enable-dual-speaker-support/" target="_blank" rel="noopener" class="press-tag">Neowin ↗</a>
           <a href="https://www.androidheadlines.com/2018/07/stereo-speaker-mod-turns-oneplus-6s-earpiece-into-a-speaker.html" target="_blank" rel="noopener" class="press-tag">Android Headlines ↗</a>
           <a href="https://oneplus.gadgethacks.com/how-to/get-true-stereo-sound-your-oneplus-6-by-using-earpiece-speaker-0186246/" target="_blank" rel="noopener" class="press-tag">Gadget Hacks ↗</a>
         </div>
-        <div class="hack-tech"><span class="tech-pill">Tavil Mixer</span><span class="tech-pill">Magisk</span><span class="tech-pill">AML</span><span class="tech-pill">Shell</span></div>
+        <div class="hack-tech"><span class="tech-pill">Python</span><span class="tech-pill">Qualcomm mixer paths</span><span class="tech-pill">Tasha / Tavil</span><span class="tech-pill">Magisk</span><span class="tech-pill">AML</span><span class="tech-pill">Shell</span></div>
       </div>
       <div class="hack-card reveal">
-        <div class="hack-card-tag">Audio · 661 replies · 104 likes</div>
-        <div class="hack-title">Stereo Speaker Mod</div>
-        <div class="hack-sub">OnePlus 6T · Oct 2018</div>
-        <div class="hack-body">
-          Rebuilt for the 6T with AML compatibility, fixed audio sync delays between earpiece and main driver,
-          and resolved speakerphone conflicts. Three production versions, each solving issues the previous one uncovered.
-          104 likes on the original post.
-        </div>
-        <div class="press-row">
-          <a href="https://github.com/acervenky/op6tstereo" target="_blank" rel="noopener" class="press-tag">GitHub ↗</a>
-          <a href="https://xdaforums.com/t/aml-magisk-mod-eol-v3-stereo-speaker-mod-for-oneplus-6t.3860041/" target="_blank" rel="noopener" class="press-tag">XDA Thread ↗</a>
-        </div>
-        <div class="hack-tech"><span class="tech-pill">Tavil Mixer</span><span class="tech-pill">AML</span><span class="tech-pill">Magisk</span><span class="tech-pill">Shell</span></div>
-      </div>
-      <div class="hack-card reveal">
-        <div class="hack-card-tag">Kernel · SafetyNet Clean</div>
+        <div class="hack-card-tag">Kernel · Sustained over peak · SafetyNet Clean</div>
         <div class="hack-title">Quax Kernel</div>
-        <div class="hack-sub">Redmi K20 Pro · Snapdragon 855</div>
+        <div class="hack-sub">Redmi K20 Pro · Snapdragon 855 · Android 9 → 10</div>
         <div class="hack-body">
-          Deep Snapdragon 855 tuning: additional GPU frequencies at 675MHz, Adrenoboost, Nap low-power GPU state,
-          Maple I/O Scheduler, LZ4 + F2FS, SLIMbus overclocking, USB fast charging toggle.
-          35 commits, 8 releases. SafetyNet passed throughout. 97.3% C/C++.
+          The kernel is the layer that decides how a phone spends power — how fast the GPU is allowed to run, when
+          it idles, how writes hit storage. Manufacturers lock those decisions in a shipped binary. Changing any of
+          them means replacing the kernel, which is what this is: a full Linux source tree, built and maintained for
+          one device.<br><br>
+          <strong style="color:var(--white)">The interesting decision was a number I chose not to reach.</strong>
+          Competing kernels added an 810MHz turbo step to the Adreno 640 GPU, which wins a benchmark run — but the
+          K20 Pro cools passively, and it couldn't hold that. Phones running 810MHz throttled hard after five to ten
+          minutes and dropped frames mid-game. I added a 675MHz step instead. Marginally lower peak score,
+          substantially better sustained performance under stress tests and long sessions. The benchmark isn't the
+          workload.<br><br>
+          That thermal headroom turned out to matter elsewhere: people pairing the kernel with 75Hz and 81Hz display
+          mods needed it, because driving the panel above spec generates heat of its own.<br><br>
+          <strong style="color:var(--white)">The hard constraint was SafetyNet</strong> — Google's integrity check
+          that banking and payment apps use to refuse modified devices. Most custom kernels break it, which makes
+          them unusable as a daily driver. Mine passed across all 8 releases, so people could actually run it.<br><br>
+          Then I wrote the guide teaching others to compile it for the same device — because the answer to "how did
+          you build this" shouldn't be a private one. 35 commits, 97.3% C.
         </div>
         <div class="press-row">
           <a href="https://github.com/acervenky/raphaelquax" target="_blank" rel="noopener" class="press-tag">GitHub ↗</a>
-          <a href="https://forum.xda-developers.com/k20-pro/development/kernel-quax-advanced-stock-kernel-gpu-oc-t3960791" target="_blank" rel="noopener" class="press-tag">XDA Thread ↗</a>
+          <a href="https://xdaforums.com/t/kernel-q-v3-eol-f2fs-quax-advanced-stock-kernel-beta.3960791/" target="_blank" rel="noopener" class="press-tag">XDA Thread ↗</a>
+          <a href="https://forum.xda-developers.com/k20-pro/how-to/guide-how-to-compile-kernel-redmi-k20-t3971443" target="_blank" rel="noopener" class="press-tag">Build guide I wrote ↗</a>
+          <a href="https://androidfilehost.com/?w=files&amp;flid=302802" target="_blank" rel="noopener" class="press-tag">Releases ↗</a>
         </div>
-        <div class="hack-tech"><span class="tech-pill">C / C++</span><span class="tech-pill">Adreno 640</span><span class="tech-pill">Maple I/O</span><span class="tech-pill">F2FS</span><span class="tech-pill">SafetyNet</span></div>
+        <div class="hack-tech"><span class="tech-pill">C / C++</span><span class="tech-pill">Linux kernel</span><span class="tech-pill">Adreno 640</span><span class="tech-pill">Maple I/O</span><span class="tech-pill">F2FS</span><span class="tech-pill">SafetyNet</span></div>
       </div>
     </div>
 
-    <hr class="sub-divider" />
-
-    <!-- Xperia Era — historical context -->
-    <div class="sub-label">Sony Xperia Era · 2012 · Xperia Pixel Team · Where it started</div>
-    <div class="sub-intro">
-      The foundation. Before audio mods and kernel work, I was building full custom ROMs as a member of the
-      <strong style="color:var(--white)">Xperia Pixel Team</strong> — crafting complete Android experiences
-      for Sony hardware. The ROMs were covered by international tech press.
-    </div>
-    <div class="hack-grid">
-      <div class="hack-card reveal">
-        <div class="hack-card-tag">ROM</div>
-        <div class="hack-title">Dynamic™ ROM</div>
-        <div class="hack-sub">Sony Xperia U &amp; Xperia P · ICS</div>
-        <div class="hack-body">
-          Full custom ROM with Mali 400 GPU tweaks, Galaxy S III launcher integration, AOSP audio enhancements,
-          and EXT4 claiming 2× the speed of stock. Supported both locked and unlocked bootloaders.
-          Shipped across two Xperia devices simultaneously.
-        </div>
-        <div class="press-row">
-          <a href="https://xdaforums.com/t/rom-8-12-dynamic-tm-rom-for-xperia-p-by-xpt-development-temp-stopped.1914388/" target="_blank" rel="noopener" class="press-tag">XDA Thread ↗</a>
-          <a href="https://www.ibtimes.co.uk/galaxy-s3-dynamic-rom-sony-xperia-u-391920" target="_blank" rel="noopener" class="press-tag">IBTimes UK ↗</a>
-          <a href="https://androidadvices.com/update-sony-xperia-galaxy-s3-styled-dynamic-custom-rom-firmware/" target="_blank" rel="noopener" class="press-tag">Android Advices ↗</a>
-        </div>
-        <div class="hack-tech"><span class="tech-pill">Mali 400</span><span class="tech-pill">CWM</span><span class="tech-pill">ICS / Android 4.x</span><span class="tech-pill">eXperia Terminator</span></div>
-      </div>
-      <div class="hack-card reveal">
-        <div class="hack-card-tag">ROM · 322+ replies</div>
-        <div class="hack-title">Infinity™ ROM</div>
-        <div class="hack-sub">Sony Xperia U · All Bootloaders</div>
-        <div class="hack-body">
-          AOKP and CM experience on stock ICS. Three versions, each a genuine architectural evolution — ending at v3
-          with DSP Manager audio, Oscar Launcher, Xperia JB statusbar, built-in bloatware remover, and SuperSU.
-          Marketed (and received) as "5× smoother than previous versions."
-        </div>
-        <div class="press-row">
-          <a href="https://theunlockr.com/rom/infinity-rom-5/" target="_blank" rel="noopener" class="press-tag">The Unlockr ↗</a>
-          <a href="https://xdaforums.com/t/rom-5-4-all-bls-infinity-tm-rom-for-xperia-u-v3-released.1946478/" target="_blank" rel="noopener" class="press-tag">XDA Thread ↗</a>
-        </div>
-        <div class="hack-tech"><span class="tech-pill">AOKP</span><span class="tech-pill">CyanogenMod</span><span class="tech-pill">DSP Manager</span><span class="tech-pill">Bass Boost</span><span class="tech-pill">Apollo</span></div>
-      </div>
-    </div>
 
     <!-- Also shipped -->
     <div class="also-shipped reveal">
@@ -1156,12 +1159,35 @@
 
     <hr class="sub-divider" />
 
+    <!-- Xperia Era — historical context -->
+    <div class="sub-head">
+      <div class="sub-label">Sony Xperia Era · 2012 · Xperia Pixel Team · Where it started</div>
+      <div class="sub-intro">
+      Where it started. As a member of the <strong style="color:var(--white)">Xperia Pixel Team</strong> I shipped two full
+      custom ROMs for Sony hardware on Android ICS — <strong style="color:var(--white)">Dynamic™</strong> (Xperia U &amp; P;
+      Mali 400 GPU tweaks, AOSP audio, EXT4 tuning, locked and unlocked bootloaders) and
+      <strong style="color:var(--white)">Infinity™</strong> (Xperia U; three versions, AOKP/CM on stock ICS, DSP Manager audio).
+      Both were picked up by international tech press.
+      <span class="press-row" style="margin-top:0.9rem;">
+        <a href="https://www.ibtimes.co.uk/galaxy-s3-dynamic-rom-sony-xperia-u-391920" target="_blank" rel="noopener" class="press-tag">IBTimes UK ↗</a>
+        <a href="https://theunlockr.com/rom/infinity-rom-5/" target="_blank" rel="noopener" class="press-tag">The Unlockr ↗</a>
+        <a href="https://androidadvices.com/update-sony-xperia-galaxy-s3-styled-dynamic-custom-rom-firmware/" target="_blank" rel="noopener" class="press-tag">Android Advices ↗</a>
+        <a href="https://xdaforums.com/t/rom-8-12-dynamic-tm-rom-for-xperia-p-by-xpt-development-temp-stopped.1914388/" target="_blank" rel="noopener" class="press-tag">Dynamic™ thread ↗</a>
+        <a href="https://xdaforums.com/t/rom-5-4-all-bls-infinity-tm-rom-for-xperia-u-v3-released.1946478/" target="_blank" rel="noopener" class="press-tag">Infinity™ thread ↗</a>
+      </span>
+      </div>
+    </div>
+
+    <hr class="sub-divider" />
+
     <!-- OC -->
-    <div class="sub-label">Competitive Overclocking · HWBot · Enthusiast League</div>
-    <div class="sub-intro">
-      HawkOC India grew alongside ModMyLaptop — both rooted in the same obsession with thermal limits.
-      No access to liquid nitrogen meant building the tools that weren't available. The results were earned through
-      engineering, not equipment budgets.
+    <div class="sub-head">
+      <div class="sub-label">Competitive Overclocking · HWBot · Enthusiast League</div>
+      <div class="sub-intro">
+        HawkOC India grew alongside ModMyLaptop — both rooted in the same obsession with thermal limits.
+        No access to liquid nitrogen meant building the tools that weren't available. The results were earned through
+        engineering, not equipment budgets.
+      </div>
     </div>
     <div class="hack-grid">
       <div class="hack-card reveal" style="border-color:rgba(155,48,255,0.3);">
@@ -1223,7 +1249,7 @@
             <div class="oe-tagline">Replaced a ₹500 relay with an LLM agent running an OODA loop.</div>
           </div>
           <div class="oe-body">
-            A 165W off-grid solar setup where grid/solar switching is managed by a Pico W running a FastAPI
+            A 330W off-grid solar setup (2 × 165W panels) where grid/solar switching is managed by a Pico W running a FastAPI
             server and an Ollama LLM agent. The agent doesn't react to voltage — it reasons: Coulomb counting
             for accurate state-of-charge, OpenWeather forecasts to prevent deep discharge before cloudy days,
             and a SQLite log of past decisions that the agent reviews to improve future ones. Break-Before-Make
@@ -1456,6 +1482,79 @@
       </div>
     </div>
 
+    <div class="oe-card reveal" style="margin-top:2rem;">
+      <div class="oe-card-body">
+        <div>
+          <div class="oe-number">AE — 02</div>
+          <div class="oe-title">JobMemo</div>
+          <div class="oe-tagline">Know if you're a fit. Know if they're worth it. Then apply.</div>
+        </div>
+        <div class="oe-body">
+          Tab-switching hell: paste the JD into an LLM, Google the company, check Glassdoor, repeat twenty times
+          a day with no memory of what you decided about the last one.<br><br>
+          JobMemo is a Chrome extension that lives on the job portal itself. It scores the role against your
+          resume — 0 to 100 at temperature 0, same rubric every time, so the same job always scores the same
+          and it isn't a mood. A 6-turn ReAct loop researches the company live, then it drafts the cover letter
+          in context. No backend, no account, nothing leaves the browser. Point it at Ollama and nothing leaves
+          the machine.
+        </div>
+        <div class="oe-metrics">
+          <div class="oe-metric"><span class="oe-val">9</span><span class="oe-lbl">Portals supported</span></div>
+          <div class="oe-metric"><span class="oe-val">6-turn</span><span class="oe-lbl">Research agent</span></div>
+          <div class="oe-metric"><span class="oe-val">Zero</span><span class="oe-lbl">Backends</span></div>
+          <div class="oe-metric"><span class="oe-val">T=0</span><span class="oe-lbl">Deterministic scoring</span></div>
+        </div>
+        <div class="oe-stack">
+          <span class="tech-pill">Chrome MV3</span>
+          <span class="tech-pill">JavaScript</span>
+          <span class="tech-pill">ReAct agent</span>
+          <span class="tech-pill">Ollama</span>
+          <span class="tech-pill">OpenRouter</span>
+          <span class="tech-pill">No backend</span>
+        </div>
+        <div class="press-row" style="margin-top:1.2rem;">
+          <a href="https://github.com/acervenky/adequately-engineered-jobmemo" target="_blank" rel="noopener" class="press-tag">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="oe-card reveal" style="margin-top:2rem;">
+      <div class="oe-card-body">
+        <div>
+          <div class="oe-number">AE — 03</div>
+          <div class="oe-title">MumbaiDams</div>
+          <div class="oe-tagline">All 7 reservoirs on one page. No guesswork about water cuts.</div>
+        </div>
+        <div class="oe-body">
+          Every pre-monsoon: five articles saying Mumbai will run dry, five saying it won't. BMC publishes weekly
+          storage numbers for each lake separately, nobody puts them together, and nobody says whether this year's
+          ENSO index actually implies a bad monsoon.<br><br>
+          MumbaiDams pulls storage from BMC, FPJ and numerical.co.in, cross-validates against CWC bulletins, layers
+          in Open-Meteo rainfall corrected for its 38% peak-monsoon underestimate against IMD ground stations,
+          tracks NOAA's ENSO index and runs 12-month projections. Tansa, Vihar, Tulsi, Modak Sagar, Bhatsa, Upper
+          Vaitarna, Middle Vaitarna — one page. Static HTML, no server, no account.
+        </div>
+        <div class="oe-metrics">
+          <div class="oe-metric"><span class="oe-val">7</span><span class="oe-lbl">Reservoirs tracked</span></div>
+          <div class="oe-metric"><span class="oe-val">12 mo</span><span class="oe-lbl">Projections</span></div>
+          <div class="oe-metric"><span class="oe-val">4</span><span class="oe-lbl">Cross-validated sources</span></div>
+          <div class="oe-metric"><span class="oe-val">Zero</span><span class="oe-lbl">Backends</span></div>
+        </div>
+        <div class="oe-stack">
+          <span class="tech-pill">Vanilla JS</span>
+          <span class="tech-pill">Open-Meteo</span>
+          <span class="tech-pill">NOAA CPC</span>
+          <span class="tech-pill">IMD / CWC</span>
+          <span class="tech-pill">GitHub Pages</span>
+          <span class="tech-pill">No backend</span>
+        </div>
+        <div class="press-row" style="margin-top:1.2rem;">
+          <a href="https://acervenky.github.io/mumbai-dam-tracker/" target="_blank" rel="noopener" class="press-tag">Live site ↗</a>
+          <a href="https://github.com/acervenky/mumbai-dam-tracker" target="_blank" rel="noopener" class="press-tag">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+
     <div class="oe-cta reveal" style="margin-top:2.5rem;">
       <div class="oe-cta-text">
         <div class="section-label" style="margin-bottom:0.5rem;">Adequately Engineered</div>
@@ -1465,7 +1564,7 @@
           Style points optional. Working in production: mandatory.
         </p>
       </div>
-      <a href="https://github.com/acervenky" target="_blank" rel="noopener" class="btn btn-ghost">More on GitHub ↗</a>
+      <a href="https://acervenky.github.io/adequately-engineered-catalogue/" target="_blank" rel="noopener" class="btn btn-ghost">View Full Catalogue ↗</a>
     </div>
 
   </div>
@@ -1536,8 +1635,9 @@
     <div class="section-label">Get in touch</div>
     <h2 class="section-title reveal">Let's <span class="grad">Talk</span></h2>
     <p class="section-sub reveal" style="margin: 0 auto;">
-      Open to senior engineering roles — backend, AI infrastructure, or anything at the intersection.
-      Also happy to talk about overclocking, kernel work, or why your solar setup is underperforming.
+      Based in Mumbai, India · open to remote. Open to senior engineering roles — backend, AI infrastructure,
+      or anything at the intersection. Also happy to talk about overclocking, kernel work, or why your solar
+      setup is underperforming.
     </p>
 
     <div class="contact-links">
@@ -1563,6 +1663,12 @@
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
+  <div class="footer-sites">
+    <a href="https://acervenky.github.io/over-engineered-catalogue/">Over Engineered ↗</a>
+    <a href="https://acervenky.github.io/adequately-engineered-catalogue/">Adequately Engineered ↗</a>
+    <a href="https://github.com/acervenky" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="/llms.txt">llms.txt</a>
+  </div>
   <p>Built by <span>Venkatesh Surve</span> · No frameworks. No build step. Just HTML.</p>
 </footer>
 
@@ -1657,27 +1763,6 @@ document.querySelectorAll('[data-src]').forEach(el=>{
 lightboxClose.addEventListener('click',()=>lightbox.classList.remove('open'));
 lightbox.addEventListener('click',e=>{ if(e.target===lightbox) lightbox.classList.remove('open'); });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') lightbox.classList.remove('open'); });
-
-/* ── Cycling Role Subtitle ── */
-(function(){
-  const roles = [
-    'AI Backend Engineer',
-    'Kernel Engineer',
-    'Multi-agent Systems Builder',
-    'Foundation-Level Thinker'
-  ];
-  let idx = 0;
-  const el = document.getElementById('hero-role');
-  if (!el) return;
-  setInterval(() => {
-    el.classList.add('fade-out');
-    setTimeout(() => {
-      idx = (idx + 1) % roles.length;
-      el.textContent = roles[idx];
-      el.classList.remove('fade-out');
-    }, 360);
-  }, 3000);
-})();
 
 /* ── LLM Streaming Tagline ── */
 (function(){
